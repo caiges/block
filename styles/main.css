@@ -66,11 +66,15 @@
     h6 {
       @apply font-semibold mt-6 mb-2 text-lg text-white;
     }
+    ul,
+    li {
+      @apply list-inside my-2 ml-4 marker:text-brand;
+    }
     ul {
-      @apply list-disc list-inside my-2 ml-4;
+      @apply list-disc;
     }
     ol {
-      @apply list-decimal list-inside my-2 ml-4;
+      @apply list-decimal;
     }
     strong {
       @apply font-medium;
