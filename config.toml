@@ -17,3 +17,12 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+[extra.intro]
+heading = "Blog/Black theme for Zola"
+subheading = "Thoughts, stories and ideas."
+avatar_url = "https://picsum.photos/200"
+
+[extra.footer]
+license_text = "The content under this site is MIT licensed."
+
