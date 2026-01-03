@@ -4,14 +4,15 @@
   <div class="space-y-4">
     <div class="flex items-center gap-4">
       <img
-        src="https://avatars.githubusercontent.com/u/28098330?v=4"
+        src="{{ config.extra.intro.avatar_url }}"
         class="size-20 rounded-xl"
       />
       <div class="space-y-1">
-        <p class="font-medium text-white">Hello, I am Sabu Siyad</p>
+        <p class="font-medium text-white">{{ config.extra.intro.heading }}</p>
         <p class="font-medium text-sm">
-          Security Engineer at
-          <a href="https://frappe.io" target="_blank">Frappe</a>.
+          {% block subheading %}
+            {{ config.extra.intro.subheading }}
+          {% endblock %}
         </p>
       </div>
     </div>
