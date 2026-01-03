@@ -17,10 +17,11 @@ tags = []
 # be merged with user data, some kind of prefix or nesting is preferable
 # Use snake_casing to be consistent with the rest of Zola
 [extra]
-footer = ""
 
 [extra.intro]
-heading = "Blog/Block theme for Zola"
+heading = "Blog/Black theme for Zola"
 subheading = "Thoughts, stories and ideas."
 avatar_url = "https://picsum.photos/200"
 
+[extra.footer]
+license_text = ""
