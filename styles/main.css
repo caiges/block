@@ -1,39 +1,9 @@
-@font-face {
-  font-family: "Zilla Slab";
-  src: url("/fonts/ZillaSlab-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  size-adjust: 120%;
-}
-
-@font-face {
-  font-family: "Zilla Slab";
-  src: url("/fonts/ZillaSlab-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  size-adjust: 120%;
-}
-
-@font-face {
-  font-family: "Zilla Slab";
-  src: url("/fonts/ZillaSlab-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  size-adjust: 120%;
-}
-
-@font-face {
-  font-family: "Zilla Slab";
-  src: url("/fonts/ZillaSlab-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-  size-adjust: 120%;
-}
-
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Zilla Slab", sans-serif;
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-head: "Arbutus Slab", var(--font-sans);
   --color-brand: var(--color-indigo-200);
 }
 
@@ -64,7 +34,7 @@
     h4,
     h5,
     h6 {
-      @apply font-semibold mt-6 mb-2 text-lg text-white;
+      @apply font-head font-semibold mt-6 mb-2 text-lg text-white;
     }
     ul,
     li {
