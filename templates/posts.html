@@ -1,0 +1,29 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+  <title>{{ section.title }} - {{ config.title }}</title>
+{% endblock %}
+
+{% block main %}
+  <div class="space-y-4">
+    <div class="text-xl font-semibold text-brand font-head">
+      {{ section.title }}
+    </div>
+    <div class="post">{{ section.content | safe }}</div>
+    <ul class="space-y-4 mb-4">
+      {% for page in section.pages %}
+        <li class="space-y-1">
+          <a
+            class="block font-medium hover:underline underline-offset-4"
+            href="{{ page.permalink | safe }}"
+          >
+            {{ page.title }}
+          </a>
+          {% if page.date %}
+            <div class="text-sm">{{ page.date | date(format="%B %d, %Y") }}</div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

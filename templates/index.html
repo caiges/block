@@ -17,19 +17,19 @@
       </div>
     </div>
     <div class="post">{{ section.content | safe }}</div>
-    <ul class="space-y-4 mb-4">
-      <div class="w-max text-xl font-semibold text-brand font-head">Posts</div>
-      {% for page in section.pages %}
-        <li class="space-y-1">
-          <a
-            class="block font-medium hover:underline underline-offset-4"
-            href="{{ page.permalink }}"
-          >
-            {{ page.title }}
-          </a>
-          <div class="text-sm">{{ page.date | date(format="%B %d, %Y") }}</div>
-        </li>
+    <nav
+      class="flex items-center gap-4 mb-4"
+      style="flex-wrap: wrap;"
+      aria-label="Main pages"
+    >
+      {% for nav_item in config.extra.nav %}
+        <a
+          class="font-medium hover:underline underline-offset-4"
+          href="{{ nav_item.url | safe }}"
+        >
+          {{ nav_item.title }}
+        </a>
       {% endfor %}
-    </ul>
+    </nav>
   </div>
 {% endblock %}
